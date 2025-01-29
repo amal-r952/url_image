@@ -25,7 +25,7 @@ class _BuildHtmlImageWidgetState extends State<BuildHtmlImageWidget> {
         ..style.width = '100%'
         ..style.height = '100%'
         ..style.objectFit =
-            'contain'; // Ensuring the image is contained within its container
+            'contain'; 
 
       return imgElement;
     });
@@ -36,7 +36,7 @@ class _BuildHtmlImageWidgetState extends State<BuildHtmlImageWidget> {
   @override
   void initState() {
     super.initState();
-    createImageView(); // Register the image view when the widget is initialized
+    createImageView(); 
   }
 
   @override
@@ -54,7 +54,7 @@ class _BuildHtmlImageWidgetState extends State<BuildHtmlImageWidget> {
       width: 500,
       height: 500,
       child: HtmlElementView(
-          viewType: viewType), // Display the registered HTML image
+          viewType: viewType), 
     );
   }
 }
