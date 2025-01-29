@@ -53,14 +53,14 @@ class _HomePageState extends State<HomePage> {
                     child: GestureDetector(
                       onDoubleTap: isFullScreen
                           ? exitFullScreen
-                          : enterFullScreen, // Toggle fullscreen on double-tap
+                          : enterFullScreen, 
                       child: BuildHtmlImageWidget(imageUrl: imageUrl!),
                     ),
                   ),
                 ),
             ],
           ),
-          // Positioning the TextField at the bottom of the screen
+         
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                       onChanged: (value) {
                         setState(() {
                           imageUrl =
-                              null; // Reset image URL when the text changes
+                              null;
                         });
                       },
                     ),
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          // Overlay and menu for fullscreen actions
+          //menu for fullscreen actions
           if (isMenuVisible)
             GestureDetector(
               onTap: closeMenu,
@@ -137,7 +137,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            isMenuVisible = !isMenuVisible; // Toggle menu visibility
+            isMenuVisible = !isMenuVisible; 
           });
         },
         child: const Icon(Icons.menu),
